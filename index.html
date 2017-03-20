@@ -7,7 +7,7 @@
       body { font: 16px Helvetica, Arial;}
       form { background: #43a6df; padding: 3px; position: fixed; bottom: 0; width: 100%; }
       form input { border: 0; padding-left: 10px; width: 85%; margin-right: 1%;height: 35px;font-size: 16px; }
-      form button { width: 14%; background: rgb(130, 224, 255); border: none; padding: 10px; }
+      form button { width: 14%; background: green; border: none; padding: 10px; border-radius: 5px;font-size: 12px;color: white;cursor: pointer;}
       #messages { list-style-type: none; margin: 0; padding: 0; }
       #messages li { padding: 5px 10px; }
       #messages li:nth-child(odd) { background: #eee; }
@@ -26,10 +26,10 @@
     </style>
   </head>
   <body>
-    <div class="title">Welcome : Brajesh</div>
+    <div class="title">Welcome to ChatBot</div>
     <ul id="messages"></ul>
     <form action="">
-      <input id="m" autocomplete="off" /><button>Send</button>
+      <input id="m" autocomplete="off" placeholder="Enter your message" /><button>Send</button>
     </form>
     <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
