@@ -23,15 +23,47 @@
       ul{
         padding-top: 5px !important;
       }
+      .welcome {
+          padding-top: 250px;
+          width: 100%;
+          text-align: center;
+          height: 50px;
+          display: flex;
+          justify-content: space-between;
+          padding-left: 20px;
+          padding-right: 20px;
+      }
+
+      .welcome > button{
+        height: 36px;
+        background-color: green;
+        color: white;
+        width: 14%;
+        border: none;
+        font-size: 15px;
+      }
+
+      .welcome > input {
+        height: 36px;
+        border: 1px solid grey;
+        width: 85%;
+        padding-left: 15px;
+        font-size: 15px;
+      }
 
     </style>
   </head>
   <body>
-    <div class="title">Welcome to ChatBot</div>
-    <ul id="messages"></ul>
-    <form action="">
-      <input id="m" autocomplete="off" placeholder="Enter your message" /><button>Send</button>
-    </form>
+    <div class="welcome">
+        <input id="name" autocomplete="off" placeholder="Enter your name" /><button id="Go">Go</button>
+    </div>
+    <div class="chatbox">
+        <div class="title">Welcome to ChatBot</div>
+        <ul id="messages"></ul>
+        <form action="">
+          <input id="m" autocomplete="off" placeholder="Enter your message" /><button>Send</button>
+        </form>
+    </div>
     <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
     <script>
@@ -43,9 +75,22 @@
           return false;
         });
         socket.on('chat message', function(msg){
-          $('#messages').append($('<li>').text(msg));
+          var message = userName +' : '+msg
+          $('#messages').append($('<li>').text(message));
           window.scrollTo(0, document.body.scrollHeight);
         });
+
+        $('.chatbox').hide();
+        var userName = '';
+        $('#Go').on('click', function(){
+          if($('#name').val().length>0){
+              $('.chatbox').show();
+              $('.welcome').hide();
+              userName = $('#name').val();
+          }
+          //alert($('#name').val());
+        })
+
       });
     </script>
   </body>
