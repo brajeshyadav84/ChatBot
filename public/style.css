@@ -113,7 +113,7 @@ ul {
 
 .chatArea {
   height: 100%;
-  padding-bottom: 70px;
+  padding-bottom: 50px;
 }
 
 .messages {
@@ -139,7 +139,7 @@ ul {
 .inputMessage {
   border: 5px solid #43a6df;
   bottom: 0;
-  height: 70px;
+  height: 50px;
   left: 0;
   outline: none;
   padding-left: 10px;
