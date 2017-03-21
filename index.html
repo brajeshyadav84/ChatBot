@@ -57,7 +57,7 @@
     <div class="welcome">
         <input id="name" autocomplete="off" placeholder="Enter your name" /><button id="Go">Go</button>
     </div>
-    <div class="chatbox">
+    <div class="chatbox" style="display: none">
         <div class="title">Welcome to ChatBot</div>
         <ul id="messages"></ul>
         <form action="">
@@ -70,17 +70,17 @@
       $(function () {
         var socket = io();
         $('form').submit(function(){
-          socket.emit('chat message', $('#m').val());
+          socket.emit('chat message', userName +' : '+ $('#m').val());
           $('#m').val('');
           return false;
         });
         socket.on('chat message', function(msg){
-          var message = userName +' : '+msg
-          $('#messages').append($('<li>').text(message));
+          // var message = userName +' : '+msg
+          $('#messages').append($('<li>').text(msg));
           window.scrollTo(0, document.body.scrollHeight);
         });
 
-        $('.chatbox').hide();
+        // $('.chatbox').hide();
         var userName = '';
         $('#Go').on('click', function(){
           if($('#name').val().length>0){
