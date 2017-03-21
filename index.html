@@ -14,11 +14,16 @@
       #messages li:nth-child(odd) { background: #eee; }
       #messages { margin-bottom: 40px }
       .title{
+          
+      }
+      .titleContainer{
           height: 45px;
           padding: 15px;
           background-color: #43a6df;
           color: white;
           box-shadow: 5px 1px 3px 1px grey;
+          display: flex;
+          justify-content: space-between;
       }
       ul{
         padding-top: 5px !important;
@@ -58,7 +63,10 @@
         <input id="name" autocomplete="off" placeholder="Enter your name" /><button id="Go">Go</button>
     </div>
     <div class="chatbox" style="display: none">
-        <div class="title">Welcome to ChatBot</div>
+        <div class="titleContainer">
+            <div>Welcome to ChatBot</div> 
+            <div>Online: <span id="total"></span></div>
+        </div>
         <ul id="messages"></ul>
         <form action="">
           <input id="m" autocomplete="off" placeholder="Enter your message" /><button>Send</button>
@@ -81,12 +89,15 @@
         });
 
         // $('.chatbox').hide();
+        var totalUser = 0;
         var userName = '';
         $('#Go').on('click', function(){
           if($('#name').val().length>0){
               $('.chatbox').show();
               $('.welcome').hide();
               userName = $('#name').val();
+              totalUser ++;
+              $('#total').html(totalUser);
           }
           //alert($('#name').val());
         })
