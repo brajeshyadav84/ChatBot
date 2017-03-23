@@ -49,7 +49,7 @@ io.on('connection', function (socket) {
       numUsers: numUsers
     });
 
-    socket.broadcast.emit("update-people", {count: numUsers});
+    socket.broadcast.emit("update-user", {count: numUsers});
 
   });
 
@@ -77,8 +77,8 @@ io.on('connection', function (socket) {
         username: socket.username,
         numUsers: numUsers
       });
-      
-      socket.broadcast.emit("update-people", {count: numUsers});
+
+      socket.broadcast.emit("update-user", {count: numUsers});
     }
   });
 });
