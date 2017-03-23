@@ -149,6 +149,12 @@ ul {
   width: 100%;
 }
 
+.chatbox {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
 .titleContainer{
           height: 45px;
           padding: 10px;
