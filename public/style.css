@@ -41,7 +41,7 @@ ul {
 }
 
 .page {
-  height: 94%;
+  height: 100%;
   position: absolute;
   width: 100%;
 }
@@ -114,6 +114,7 @@ ul {
 .chatArea {
   height: 100%;
   padding-bottom: 50px;
+  padding-top: 45px;
 }
 
 .messages {
@@ -149,7 +150,7 @@ ul {
 }
 
 .titleContainer{
-          height: 10%;
+          height: 45px;
           padding: 10px;
           background-color: #43a6df;
           color: white;
