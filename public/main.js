@@ -279,4 +279,19 @@ $(function() {
     log('attempt to reconnect has failed');
   });
 
+  socket.on("update-people", function(data){
+    //var peopleOnline = [];
+    $("#totalCount").empty();
+    $('#totalCount').append("<div class=\"list-group-item active\">online <span class=\"badge\">"+data.count+"</span></div>");
+    // $.each(data.people, function(a, obj) {
+    //   if (!("country" in obj)) {
+    //     html = "";
+    //   } else {
+    //     html = "<img class=\"flag flag-"+obj.country+"\"/>";
+    //   }
+    //   $('#people').append("<li class=\"list-group-item\"><span>" + obj.name + "</span> <i class=\"fa fa-"+obj.device+"\"></i> " + html + " <a href=\"#\" class=\"whisper btn btn-xs\">whisper</a></li>");
+    //   //peopleOnline.push(obj.name);
+    // });
+  });
+
 });
