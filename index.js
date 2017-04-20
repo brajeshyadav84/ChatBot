@@ -6,7 +6,7 @@ var io = require('socket.io')(server);
 var port = process.env.PORT || 3000;
 
 var people = {};
-var rooms = {};
+var rooms = ['Technical', 'Jobs', 'Gossip', 'funTalk', '', 'PrivateRoom'];
 var sockets = [];
 
 server.listen(port, function () {
