@@ -92,6 +92,18 @@ ul {
   display: none;
 }
 
+.createroom.page {
+  display: none;
+}
+
+.room.page {
+  display: none;
+}
+
+.joinroom.page {
+  display: none;
+}
+
 /* Font */
 
 .messages {
@@ -171,5 +183,42 @@ ul {
   width: 30px;
   background-image: url("images/CB.png");
   background-size: contain;
+}
+
+
+.layout-twoColumn {
+    width: 47.5%;
+    margin-bottom: 1.5rem
+}
+
+.layout-oneColumn {
+    width: 100%;
+    margin-bottom: 1.5rem
+}
+
+.wrap-container {
+    padding: 4rem 1.5rem 0;
+    width: 100%
+}
+
+.wrapflex {
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.list-thumbnail {
+    height: 7rem;
+    position: relative;
+    /*background-color: grey;*/
+    text-align: center;
+    font-size: 2rem;
+    /*padding-top: 40px;*/
+    color: whitesmoke;
+    border-radius: 1rem;
+    background-color: grey;
 }
 
