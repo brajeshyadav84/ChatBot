@@ -90,7 +90,7 @@ $(function() {
     var $messageBodyDiv = $('<span class="messageBody">')
       .text(data.message);
 
-    var typingClass = data.typing ? 'typing' : '';
+    var typingClass = data.typing1 ? 'typing' : '';
     var $messageDiv = $('<li class="message"/>')
       .data('username', data.username)
       .addClass(typingClass)
@@ -154,7 +154,7 @@ $(function() {
     if (connected) {
       if (!typing) {
         typing = true;
-        socket.emit('typing');
+        socket.emit('typing1');
       }
       lastTypingTime = (new Date()).getTime();
 
@@ -255,7 +255,7 @@ $(function() {
   });
 
   // Whenever the server emits 'typing', show the typing message
-  socket.on('typing', function (data) {
+  socket.on('typing1', function (data) {
     addChatTyping(data);
   });
 
@@ -264,7 +264,7 @@ $(function() {
     removeChatTyping(data);
   });
 
-  socket.on('disconnect', function () {
+  socket.on('disconnect1', function () {
     log('you have been disconnected');
   });
 

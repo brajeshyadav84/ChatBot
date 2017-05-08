@@ -1,0 +1,20 @@
+{
+  "name": "Interviewgully-ChatBot",
+  "version": "0.0.1",
+  "dependencies": {
+    "bootstrap": "latest",
+    "jquery": "latest",
+    "typeahead.js": "latest",
+    "font-awesome": "latest"
+  },
+  "directory": "components",
+  "homepage": "https://github.com/brajeshyadav84/ChatBot",
+  "authors": [
+    "Sujeet Srivastava <sujeet.bob@gmail.com>"
+  ],
+  "main": "server.js",
+  "moduleType": [
+    "node"
+  ],
+  "license": "free"
+}

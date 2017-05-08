@@ -4,8 +4,15 @@
   "description": "Interviewgully Portal",
   "author": "Brajesh Kumar Yadav",
   "dependencies": {
-    "express": "^4.15.2",
-    "socket.io": "^1.7.3"
+    "express": "~3.4.8",
+    "socket.io": "~0.9.16",
+    "ejs": "~0.8.5",
+    "node-uuid": "~1.4.1",
+    "nodemon": "~1.0.13",
+    "npid": "~0.4.0",
+    "shrinkwrap": "~0.0.3",
+    "underscore": "~1.5.2",
+    "bower": "~1.2.8"
   },
   "scripts": {
     "start": "node index.js"
