@@ -6,7 +6,7 @@ var io = require('socket.io')(server);
 var port = process.env.PORT || 3000;
 
 var people = {};
-var rooms = ['Technical', 'Jobs', 'Gossip', 'funTalk', '', 'PrivateRoom'];
+var rooms = ['Gossip', 'funTalk', '', 'PrivateRoom'];
 var sockets = [];
 
 server.listen(port, function () {
@@ -55,14 +55,14 @@ io.on('connection', function (socket) {
 
   // when the client emits 'typing', we broadcast it to others
   socket.on('typing', function () {
-    socket.broadcast.emit('typing', {
+    socket.broadcast.emit('typing...', {
       username: socket.username
     });
   });
 
   // when the client emits 'stop typing', we broadcast it to others
   socket.on('stop typing', function () {
-    socket.broadcast.emit('stop typing', {
+    socket.broadcast.emit('stop typing...', {
       username: socket.username
     });
   });

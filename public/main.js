@@ -4,7 +4,7 @@ $(function() {
   var COLORS = [
     '#e21400', '#91580f', '#f8a700', '#f78b00',
     '#58dc00', '#287b00', '#a8f07a', '#4ae8c4',
-    '#3b88eb', '#3824aa', '#a700ff', '#d300e7'
+    '#3b88eb', '#3824aa', '#a700ff', '#d300e7', '#6ac075', '#1c2b45'
   ];
 
   // Initialize variables
@@ -50,7 +50,7 @@ $(function() {
       $currentInput = $inputMessage.focus();
 
       // Tell the server your username
-      socket.emit('add user', username);
+      socket.emit('New user', username);
     }
   }
 
@@ -95,7 +95,7 @@ $(function() {
 
     var typingClass = data.typing ? 'typing' : '';
     var $messageDiv = $('<li class="message"/>')
-      .data('username', data.username)
+      .data('username', data.username + " : ")
       .addClass(typingClass)
       .append($usernameDiv, $messageBodyDiv);
 
@@ -202,7 +202,7 @@ $(function() {
     if (event.which === 13) {
       if (username) {
         sendMessage();
-        socket.emit('stop typing');
+        socket.emit('stop typing...');
         typing = false;
       } else {
         setUsername();
@@ -284,6 +284,7 @@ $(function() {
 
   socket.on("update-user", function(data){
     //var peopleOnline = [];
+    console.log("data.numUsers");console.log(data.numUsers);
     $("#totalCount").empty();
     $('#totalCount').append("<div class=\"list-group-item active\">online <span class=\"badge\">"+data.count+"</span></div>");
     
