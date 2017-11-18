@@ -92,6 +92,10 @@ li .message {
 
 /* Chat page */
 
+.login.page {
+  display: none;
+}
+
 .chat.page {
   display: none;
 }

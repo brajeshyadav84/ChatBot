@@ -48,7 +48,7 @@ $(function() {
       $chatPage.show();
       $loginPage.off('click');
       $currentInput = $inputMessage.focus();
-
+      $roomPage.hide();
       // Tell the server your username
       socket.emit('add user', username);
     }
@@ -288,5 +288,10 @@ $(function() {
     //$('#totalCount').append("<div class=\"list-group-item active\">online <span class=\"badge\">"+data.count+"</span></div>");
     
   });
+
+  onSelectTopic(selectedType){
+    console.log(selectedType);
+  }
+
 
 });
