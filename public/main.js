@@ -289,9 +289,9 @@ $(function() {
     
   });
 
-  onSelectTopic(selectedType){
-    console.log(selectedType);
-  }
-
+  $( "#Gossip" ).click(function() {
+    alert( "Handler for .click() called." );
+  });
+  
 
 });
