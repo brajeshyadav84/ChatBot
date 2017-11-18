@@ -253,7 +253,7 @@ $(function() {
   // Whenever the server emits 'user left', log it in the chat body
   socket.on('user left', function (data) {
     log(data.username + ' left');
-    addParticipantsMessage(data);
+    //addParticipantsMessage(data);
     removeChatTyping(data);
   });
 
@@ -284,9 +284,8 @@ $(function() {
 
   socket.on("update-user", function(data){
     //var peopleOnline = [];
-    console.log("data.numUsers");console.log(data.numUsers);
     $("#totalCount").empty();
-    $('#totalCount').append("<div class=\"list-group-item active\">online <span class=\"badge\">"+data.count+"</span></div>");
+    //$('#totalCount').append("<div class=\"list-group-item active\">online <span class=\"badge\">"+data.count+"</span></div>");
     
   });
 
