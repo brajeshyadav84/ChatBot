@@ -1,0 +1,63 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ChatBot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <ul class="pages">
+    <div class="chatbox">
+        <div class="titleContainer">
+            <div class="logoCB"></div> 
+            <div>Welcome</div> 
+            <div id="totalCount"></div>
+        </div>
+    </div>
+    <li class="chat page">
+      <div class="chatArea">
+        <ul class="messages"></ul>
+      </div>
+      <input class="inputMessage" placeholder="Type here..."/>
+    </li>
+    <li class="login page">
+      <div class="form">
+        <h3 class="title">What's your nickname?</h3>
+        <input class="usernameInput" type="text" maxlength="20" />
+      </div>
+    </li>
+    <li class="room page">
+        <ul class="wrap-container wrapflex">
+                <li class="layout-twoColumn layout-list-container hideSection">
+                    <div id="Gossip" class="list-thumbnail">
+                        Gossip<!-- <img class="img-100" src="{{data.ImageUrl}}" alt=""/> -->
+                    </div>
+                </li>
+                <li class="layout-twoColumn layout-list-container hideSection">
+                    <div id="Techtalk" class="list-thumbnail">
+                        Techtalk<!-- <img class="img-100" src="{{data.ImageUrl}}" alt=""/> -->
+                    </div>
+                </li>
+        </ul>
+    </li>
+    <li class="joinroom page">
+      
+        <h3 class="title">Join room?</h3>
+        <input class="joinRoomInput" type="text" maxlength="20" />
+      
+    </li>
+    <li class="createroom page">
+      
+        <h3 class="title">Create your room?</h3>
+        <input class="createRoomInput" type="text" maxlength="20" />
+      
+    </li>
+  </ul>
+
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/main.js"></script>
+</body>
+</html>

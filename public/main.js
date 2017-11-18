@@ -18,7 +18,7 @@ $(function() {
   var $roomPage = $('.room.page'); // The chatroom page
   var $joinroomPage = $('.joinroom.page'); // The chatroom page
   var $createroomPage = $('.createroom.page'); // The chatroom page
-
+  var $chatboxHeader = $('.chatbox');
   // Prompt for setting a username
   var username;
   var connected = false;
@@ -49,6 +49,7 @@ $(function() {
       $loginPage.off('click');
       $currentInput = $inputMessage.focus();
       $roomPage.hide();
+      $chatboxHeader.show();
       // Tell the server your username
       socket.emit('add user', username);
     }
