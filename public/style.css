@@ -92,10 +92,6 @@ li .message {
 
 /* Chat page */
 
-.login.page {
-  display: none;
-}
-
 .chat.page {
   display: none;
 }
@@ -105,7 +101,7 @@ li .message {
 }
 
 .room.page {
-  display: block;
+  display: none;
 }
 
 .joinroom.page {
