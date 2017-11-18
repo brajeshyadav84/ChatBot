@@ -9,14 +9,21 @@
   <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
   <script>
   	$( document ).ready(function() {
-	  $( "#Gossip123" ).click(function() {
-	    alert( "Handler for .click() called." );
+	  $( "#Gossip1" ).click(function() {
+	    window.location = "https://chatbot786.herokuapp.com?id=1";
+	  });
+	  $( "#Gossip2" ).click(function() {
+	    window.location = "https://chatbot786.herokuapp.com?id=2";
 	  });
 	});
   </script>
 </head>
 <body>
-	<div id="Gossip123" class="list-thumbnail">
+	<div id="Gossip1" class="list-thumbnail">
+                        Gossip<!-- <img class="img-100" src="{{data.ImageUrl}}" alt=""/> -->
+                    </div>
+
+                    <div id="Gossip2" class="list-thumbnail">
                         Gossip<!-- <img class="img-100" src="{{data.ImageUrl}}" alt=""/> -->
                     </div>
 </body>
