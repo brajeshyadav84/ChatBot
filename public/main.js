@@ -95,7 +95,7 @@ $(function() {
 
     var typingClass = data.typing ? 'typing' : '';
     var $messageDiv = $('<li class="message"/>')
-      .data('username', data.username + " : ")
+      .data('username', data.username)
       .addClass(typingClass)
       .append($usernameDiv, $messageBodyDiv);
 
