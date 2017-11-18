@@ -101,7 +101,7 @@ li .message {
 }
 
 .room.page {
-  display: none;
+  display: block;
 }
 
 .joinroom.page {
