@@ -50,7 +50,7 @@ $(function() {
       $currentInput = $inputMessage.focus();
 
       // Tell the server your username
-      socket.emit('New user', username);
+      socket.emit('add user', username);
     }
   }
 
