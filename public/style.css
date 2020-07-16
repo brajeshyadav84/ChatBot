@@ -42,7 +42,7 @@ ul {
 
 .page {
   height: 100%;
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
 }
 
@@ -114,7 +114,7 @@ ul {
 .chatArea {
   height: 100%;
   padding-bottom: 50px;
-  padding-top: 45px;
+  padding-top: 70px;
 }
 
 .messages {
@@ -165,3 +165,114 @@ ul {
           justify-content: space-between;
           font-weight: bold;
       }
+
+
+/* header */
+.logo-rotate {
+  animation: rotation 8s infinite linear;
+  height: 50px;
+  width: 50px;
+}
+
+@keyframes logo-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.header-container-top {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  cursor: pointer;
+  background-color: #0c214d;
+  padding: .5rem 1rem;
+}
+
+.ca-menu-header {
+  background-color: #0c214d;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-container{
+  display: flex;
+  justify-content: center;
+}
+
+.header-container .navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+  color: #e01a76;
+  position: relative;
+  display: inline-block;
+}
+
+.logo-text {
+  position: absolute;
+  z-index: 999;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: 30%; /* Adjust this value to move the positioned div up and down */
+  color: white;
+  width: 140px; /* Set the width of the positioned div */
+}
+
+.header-container .navbar-brand:hover {
+  color: #e01a76;
+}
+
+.header-container .nav-link {
+  color: whitesmoke;
+  padding: 17px;
+  text-decoration: none;
+}
+
+  .header-container .nav-link:hover {
+    color: #e01a76;
+  }
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+.example-container {
+  width: 100%;
+  height: 100px;
+}
+
+.example-container-show {
+  width: 100%;
+  height: auto;
+}
+
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-sidenav {
+  padding: 10px;
+}
+
+.mat-drawer.mat-drawer-side {
+  width: 100%;
+  border: none;
+  height: 100%;
+}
+
+.navbar {
+  box-shadow: 0px 0px 5px #7d7d7d;
+}

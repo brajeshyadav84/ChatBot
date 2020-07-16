@@ -3,17 +3,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>InterviewGully ChatBot</title>
+  <title>CheckoutAsia: Share Experience with us</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <ul class="pages">
     <div class="chatbox">
-        <div class="titleContainer">
-            <div>Welcome to Technical Talk</div> 
-            <div id="totalCount"></div>
-        </div>
+        <header class="header-container-top">
+          <div class="container header-container">
+            <a class="navbar-brand">
+                <img src="https://www.checkoutasia.com/assets/images/loading.svg" class="logo-rotate" alt="" />
+                <span class="logo-text">Checkout Asia</span>
+            </a>
+            <div class="menu-container">
+              <a class="nav-link ca-text" href="https://www.checkoutasia.com">Home</a>
+
+              <a class="nav-link ca-text" href="https://www.checkoutasia.com/blog">Blog</a>
+            </div>
+          </div>
+        </header>
     </div>
     <li class="chat page">
       <div class="chatArea">
@@ -24,7 +33,7 @@
     <li class="login page">
       <div class="form">
         <h3 class="title">What's your nickname?</h3>
-        <input class="usernameInput" type="text" maxlength="20" />
+        <input class="usernameInput" type="text" maxlength="20" pattern="[A-Za-z0-9]+" />
       </div>
     </li>
   </ul>

@@ -85,7 +85,7 @@ $(function() {
     }
 
     var $usernameDiv = $('<span class="username"/>')
-      .text(data.username)
+      .text(data.username.toUpperCase()+":")
       .css('color', getUsernameColor(data.username));
     var $messageBodyDiv = $('<span class="messageBody">')
       .text(data.message);
@@ -229,7 +229,7 @@ $(function() {
   socket.on('login', function (data) {
     connected = true;
     // Display the welcome message
-    var message = "Welcome to Technical Talk";
+    var message = "Welcome to Checkout Asia";
     log(message, {
       prepend: true
     });
@@ -244,13 +244,13 @@ $(function() {
   // Whenever the server emits 'user joined', log it in the chat body
   socket.on('user joined', function (data) {
     log(data.username + ' joined');
-    addParticipantsMessage(data);
+    //addParticipantsMessage(data);
   });
 
   // Whenever the server emits 'user left', log it in the chat body
   socket.on('user left', function (data) {
     log(data.username + ' left');
-    addParticipantsMessage(data);
+    //addParticipantsMessage(data);
     removeChatTyping(data);
   });
 
