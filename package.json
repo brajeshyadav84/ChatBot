@@ -5,6 +5,7 @@
   "author": "Brajesh Kumar Yadav",
   "dependencies": {
     "express": "^4.15.2",
+    "http": "0.0.1-security",
     "socket.io": "^1.7.3"
   },
   "scripts": {
