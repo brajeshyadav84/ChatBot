@@ -3,9 +3,12 @@
   "version": "0.0.1",
   "description": "Checkoutasia",
   "author": "Brajesh Kumar Yadav",
+  "license": "Checkoutasia",
   "dependencies": {
-    "express": "^4.15.2",
+    "express": "^4.17.1",
     "http": "0.0.1-security",
+    "knex": "^0.21.2",
+    "mysql": "^2.18.1",
     "socket.io": "^1.7.3"
   },
   "scripts": {
