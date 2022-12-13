@@ -4,7 +4,7 @@
   "description": "Checkoutasia",
   "author": "Brajesh Kumar Yadav",
   "dependencies": {
-    "express": "^4.15.2",
+    "express": "^4.17.3",
     "http": "0.0.1-security",
     "socket.io": "^1.7.3"
   },
